@@ -3,6 +3,10 @@ import Home from './pages/home/Home'
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import ListaCategorias from './components/categorias/listacategroias/ListaCategorias';
+import FormCategoria from './components/categorias/formcategorias/FormCategoria';
+import DeletarCategoria from './components/categorias/deletarcategorias/DeletarCategoria';
 
 function App() {
     return (
@@ -10,16 +14,17 @@ function App() {
    
         <ToastContainer />
         <BrowserRouter>
-        {/* Navbar e Footer terão posição fixa, por isso estão fora do ROUTES */}
+       
           <Navbar />
-          {/* div = para envolver todos os elementos que irão receber uma rota.
-          min-h.. = define altura mínima, para não afetar o footer*/}
           <div className="grid  items-center  min-h-screen bg-cyan-600">
             <Routes>
-                
-                {/* /home = aponta para a tela home */}
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
-     
+                <Route path="/categorias" element={<ListaCategorias />} />
+                <Route path="/cadastrarcategoria" element={<FormCategoria />} />
+                <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+                <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+
             </Routes>
           </div>
           <Footer />

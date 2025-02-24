@@ -3,16 +3,11 @@ import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 function Footer() {
 
-    // variavel data armazena a data atual
     let data = new Date().getFullYear() 
-
-
-
 
     return (
         <>
             <div className="flex justify-center bg-gradient-to-r from-cyan-800 via-cyan-600 to-cyan-200">
-                {/*flex-col = define que os itens serão flexiveis e que estarão posicionados na vertical  */}
                 <div className="container flex flex-col items-center py-2">
                     <p className='text-xl font-semibold'>
                         Sistema de Farmácia - Paola Patricia | Copyright: {data}

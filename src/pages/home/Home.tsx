@@ -7,14 +7,7 @@ function Home() {
                         <h2 className='text-5xl '>
                             Seja Bem Vindo!
                         </h2>
-                      
-                        {/* gap = define o espeçamento entre linhas e colunas  */}
-                        <div className="flex justify-around gap-4 ">
-                            {/* rounded = define que o elemento irá ter bordas arredondadas em 0.25rem */}
-                            <div className='flex justify-around gap-4 '>
-                             
-                            </div>
-                        </div>
+
                     </div>
 
                     <div className="flex justify-center ">
